@@ -8,7 +8,7 @@ import * as ScreenOrientation from 'expo-screen-orientation';
 interface VideoDetails {
   id: string;
   title: string;
-  youtube_link: string;
+  video_url: string;
 }
 
 export default function Playback() {
@@ -23,7 +23,7 @@ export default function Playback() {
     async function fetchVideoDetails() {
       let { data, error } = await supabase
         .from("video_content")
-        .select("id, youtube_link")
+        .select("id, video_url")
         .eq("id", id)
         .single();
 
@@ -81,7 +81,7 @@ export default function Playback() {
     <View className='flex-1 justify-center items-center bg-[#1d1e24]' >
       <Video
         ref={videoRef}
-        source={{ uri: videoDetails.youtube_link }}
+        source={{ uri: videoDetails.video_url }}
         rate={1.0}
         volume={1.0}
         isMuted={false}
