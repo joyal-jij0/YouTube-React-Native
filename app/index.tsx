@@ -94,14 +94,6 @@ export default function Auth() {
           onPress={() => signUpWithEmail()}
         />
       </View>
-      <View className="pt-1 pb-1 ">
-        <Button
-          buttonStyle={{ backgroundColor: "#007aff" }}
-          title="home"
-          disabled={loading}
-          onPress={() => router.replace('/home')}
-        />
-      </View>
     </View>
     </SafeAreaView>
   );
