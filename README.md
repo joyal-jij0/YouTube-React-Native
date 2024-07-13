@@ -1,7 +1,7 @@
 # YouTube Clone
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app), react-native and supabase.
-Implemented supabase authentication and database for title, thumbnail and video storage. 
+Implemented supabase authentication and database for title, profile, thumbnail and video storage. 
 
 
 
